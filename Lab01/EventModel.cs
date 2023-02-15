@@ -34,7 +34,7 @@ namespace Lab01
       generator = new Generator(sig);
       queue = new ReqQue();
       service = new Service(a, b);
-      max_time = _max_time;
+      max_req_n = _max_time;
     }
 
     public void modelate()
@@ -67,14 +67,14 @@ namespace Lab01
 
     public string getResultsStr()
     {
-      string res = String.Format("Сгенерировано заявок: {0:D} | ", this.generated_n); //Math.Round(res, 2);
-      res += String.Format("Обработано заявок: {0:D} | ", this.service.served_n);
-      //res += String.Format("Среднее время ожидания: {0:F} | ", this.avg_que_time);
-      //res += String.Format("Среднее время обработки: {0:F} | ", service.avg_serve_time);
-      res += String.Format("Средние время пребывания: {0:F} | ", Math.Round(this.avg_full_time, 2));
-      res += String.Format("Теоретическая загрузка: {0:F} | ", Math.Round(this.theory_drain, 2));
-      res += String.Format("Практическая загрузка: {0:F} | ", Math.Round(this.practice_drain, 2));
-      res += String.Format("Время моделирования: {0:F}", Math.Round(this.curT, 2));
+      string res = String.Format("Сген. заявок: {0:D} | ", this.generated_n); //Math.Round(res, 2);
+      res += String.Format("Обр. заявок: {0:D} | ", this.service.served_n);
+      res += String.Format("Ср. время преб.: {0:F} | ", Math.Round(this.avg_full_time, 2));
+      res += String.Format("Теор. загр.: {0:F} | ", Math.Round(this.theory_drain, 2));
+      res += String.Format("Практ. загр.: {0:F} | ", Math.Round(this.practice_drain, 2));
+      res += String.Format("Время модел.: {0:F} | ", Math.Round(this.curT, 2));
+      res += String.Format("Ср. время ожид.: {0:F} | ", this.avg_que_time);
+      res += String.Format("Ср. время обр.: {0:F} | ", service.avg_serve_time);
 
       return res;
     }
@@ -90,7 +90,6 @@ namespace Lab01
 
       curT = 0;
       generated_n = 0;
-      passed_n = 0;
       avg_que_time = 0;
       avg_full_time = 0;
       practice_drain = 0;
@@ -104,9 +103,8 @@ namespace Lab01
     public Service service;
     public double curT = 0;
     const int max_default = 100;
-    public int max_time = max_default;
+    public int max_req_n = max_default;
     public int generated_n = 0;
-    public int passed_n = 0;
     public double avg_que_time = 0;
     public double avg_full_time = 0;
     public double theory_drain = 0;

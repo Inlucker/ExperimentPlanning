@@ -36,7 +36,7 @@ namespace Lab01
     {
       model.generated_n++;
       model.curT = this.time;
-      if (model.curT < model.max_time)
+      if (model.generated_n < model.max_req_n)
       {
         Request next_req = model.generator.genRequest();
         model.addEvent(new EReqGenerate(next_req));
@@ -56,7 +56,7 @@ namespace Lab01
     public override void Handle(EventModel model)
     {
       model.curT = this.time;
-      if (model.curT < model.max_time)
+      if (model.generated_n < model.max_req_n)
       {
         if (model.queue.Count != 0)
         {

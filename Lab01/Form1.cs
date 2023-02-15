@@ -43,7 +43,7 @@ namespace Lab01
 
       model.modelate();
 
-      lenOut.Text = Math.Round(model.avg_full_time, 2).ToString();
+      lenOut.Text = Math.Round(model.avg_que_time, 2).ToString();
       textBox1.Text = Math.Round(model.theory_drain, 2).ToString();
       textBox2.Text = Math.Round(model.practice_drain, 2).ToString();
 
@@ -63,30 +63,31 @@ namespace Lab01
     {
 
       chart1.Series.Clear();
-      chart1.Series.Add("Зависимость ср. времени пребывания от загрузки");
+      chart1.Series.Add("Зависимость ср. времени ожидания от загрузки");
       chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-      chart1.Series[0].Points.AddXY(0, 0);
+      //chart1.Series[0].Points.AddXY(0, 0);
 
-      int iters = 100; // 20 100
+      int iters = 100; // 20 200 100
       for (int i = 1; i <= iters; i++)
       {
 
         double intensity2 = iters;
         double intensity1 = i;
 
-        int max = 100; // 1000 100
+        int max = 1000; // 1000 100 10000
 
         EventModel model = new EventModel(intensity1, intensity2, 0, max);
 
         double x = 0;
         double y = 0;
 
-        int iters2 = 1000; // 1 1000
+        int iters2 = 100; // 1 1000 100
         for (int j = 0; j < iters2; j ++)
         {
           model.modelate();
           x += model.theory_drain;
-          y += model.avg_full_time;
+          //y += model.avg_full_time;
+          y += model.avg_que_time;
         }
         x /= iters2;
         y /= iters2;
@@ -98,7 +99,7 @@ namespace Lab01
 
       chart1.ChartAreas[0].AxisX.Interval = 0.10;
       //chart1.ChartAreas[0].AxisX.IntervalOffset = 0.01;
-      chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{0.#}";
+      chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{0.##}";
     }
   } 
 }

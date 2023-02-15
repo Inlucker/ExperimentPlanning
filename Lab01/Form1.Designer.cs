@@ -57,7 +57,7 @@ namespace Lab01
       // lenOut
       // 
       this.lenOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.lenOut.Location = new System.Drawing.Point(280, 187);
+      this.lenOut.Location = new System.Drawing.Point(280, 188);
       this.lenOut.Margin = new System.Windows.Forms.Padding(5);
       this.lenOut.Name = "lenOut";
       this.lenOut.ReadOnly = true;
@@ -82,14 +82,14 @@ namespace Lab01
       this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
       this.label10.Location = new System.Drawing.Point(10, 150);
       this.label10.Name = "label10";
-      this.label10.Size = new System.Drawing.Size(220, 24);
+      this.label10.Size = new System.Drawing.Size(344, 24);
       this.label10.TabIndex = 29;
-      this.label10.Text = "Время моделирования:";
+      this.label10.Text = "Количество сгенерированых заявок:";
       // 
       // pInp
       // 
       this.pInp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.pInp.Location = new System.Drawing.Point(238, 148);
+      this.pInp.Location = new System.Drawing.Point(362, 148);
       this.pInp.Margin = new System.Windows.Forms.Padding(5);
       this.pInp.Name = "pInp";
       this.pInp.Size = new System.Drawing.Size(116, 29);
@@ -152,9 +152,9 @@ namespace Lab01
       this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
       this.label4.Location = new System.Drawing.Point(10, 190);
       this.label4.Name = "label4";
-      this.label4.Size = new System.Drawing.Size(271, 24);
+      this.label4.Size = new System.Drawing.Size(251, 24);
       this.label4.TabIndex = 22;
-      this.label4.Text = "Средние время пребывания:";
+      this.label4.Text = "Средние время ожидания:";
       // 
       // label2
       // 
