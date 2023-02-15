@@ -21,14 +21,15 @@ namespace Lab01
       if (this.theory_drain > 1)
         this.theory_drain = 1;
       double sig = -1, a = -1, b = -1;
-      int k = 1;
+      int k_step = 1;
+      int k = k_step;
       while (a < 0 || b < 0 || sig < 0)
       {
         sig = k * intensity2 / intensity1 * Math.Sqrt(2 / Math.PI);
         double dif = scatter2 * Math.Sqrt(12);
         a = k * 1 - dif / 2;
         b = k * 1 + dif / 2;
-        k++;
+        k += k_step;
       }
       generator = new Generator(sig);
       queue = new ReqQue();
@@ -52,7 +53,7 @@ namespace Lab01
       this.avg_que_time /= service.served_n;
       this.practice_drain = service.avg_serve_time / this.curT;
       service.avg_serve_time = service.avg_serve_time / service.served_n;
-      this.avg_full_time = avg_que_time + service.avg_serve_time;
+      this.avg_full_time = (avg_que_time + service.avg_serve_time);
       generator.avg_gen_time = generator.avg_gen_time / generator.generated_n;
 
       Console.WriteLine(this.getResultsStr());

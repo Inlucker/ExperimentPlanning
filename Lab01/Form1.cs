@@ -65,22 +65,23 @@ namespace Lab01
       chart1.Series.Clear();
       chart1.Series.Add("Зависимость ср. времени пребывания от загрузки");
       chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+      chart1.Series[0].Points.AddXY(0, 0);
 
-      int iters = 20; // 200
+      int iters = 200; // 20 200
       for (int i = 1; i <= iters; i++)
       {
 
         double intensity2 = iters;
         double intensity1 = i;
 
-        int max = 1000; //100
+        int max = 100; // 1000 100
 
         EventModel model = new EventModel(intensity1, intensity2, 0, max);
 
         double x = 0;
         double y = 0;
 
-        int iters2 = 1; // 1000
+        int iters2 = 1000; // 1 1000
         for (int j = 0; j < iters2; j ++)
         {
           model.modelate();
