@@ -67,7 +67,7 @@ namespace Lab01
       chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
       chart1.Series[0].Points.AddXY(0, 0);
 
-      int iters = 200; // 20 200
+      int iters = 100; // 20 100
       for (int i = 1; i <= iters; i++)
       {
 
@@ -93,8 +93,12 @@ namespace Lab01
 
         //Render
         chart1.Series[0].Points.AddXY(x, y);
-
+        //chart1.Series[0].Points.AddXY(x, y - 1);
       }
+
+      chart1.ChartAreas[0].AxisX.Interval = 0.10;
+      //chart1.ChartAreas[0].AxisX.IntervalOffset = 0.01;
+      chart1.ChartAreas[0].AxisX.LabelStyle.Format = "{0.#}";
     }
-  }
+  } 
 }
