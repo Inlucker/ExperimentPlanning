@@ -29,9 +29,9 @@ namespace Lab01
     /// </summary>
     private void InitializeComponent()
     {
-      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-      System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-      System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+      System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+      System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+      System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
       this.lenOut = new System.Windows.Forms.TextBox();
       this.EventButton = new System.Windows.Forms.Button();
       this.label10 = new System.Windows.Forms.Label();
@@ -51,6 +51,14 @@ namespace Lab01
       this.textBox2 = new System.Windows.Forms.TextBox();
       this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
       this.graphicBtn = new System.Windows.Forms.Button();
+      this.iters1 = new System.Windows.Forms.TextBox();
+      this.max = new System.Windows.Forms.TextBox();
+      this.iters2 = new System.Windows.Forms.TextBox();
+      this.label9 = new System.Windows.Forms.Label();
+      this.label11 = new System.Windows.Forms.Label();
+      this.label12 = new System.Windows.Forms.Label();
+      this.label13 = new System.Windows.Forms.Label();
+      this.textBox3 = new System.Windows.Forms.TextBox();
       ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -68,7 +76,7 @@ namespace Lab01
       // EventButton
       // 
       this.EventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.EventButton.Location = new System.Drawing.Point(14, 316);
+      this.EventButton.Location = new System.Drawing.Point(12, 356);
       this.EventButton.Name = "EventButton";
       this.EventButton.Size = new System.Drawing.Size(310, 80);
       this.EventButton.TabIndex = 32;
@@ -190,7 +198,7 @@ namespace Lab01
       // 
       this.label3.AutoSize = true;
       this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label3.Location = new System.Drawing.Point(10, 230);
+      this.label3.Location = new System.Drawing.Point(10, 270);
       this.label3.Name = "label3";
       this.label3.Size = new System.Drawing.Size(378, 24);
       this.label3.TabIndex = 34;
@@ -199,7 +207,7 @@ namespace Lab01
       // textBox1
       // 
       this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.textBox1.Location = new System.Drawing.Point(396, 228);
+      this.textBox1.Location = new System.Drawing.Point(394, 268);
       this.textBox1.Margin = new System.Windows.Forms.Padding(5);
       this.textBox1.Name = "textBox1";
       this.textBox1.ReadOnly = true;
@@ -211,7 +219,7 @@ namespace Lab01
       // 
       this.label8.AutoSize = true;
       this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.label8.Location = new System.Drawing.Point(10, 270);
+      this.label8.Location = new System.Drawing.Point(10, 310);
       this.label8.Name = "label8";
       this.label8.Size = new System.Drawing.Size(365, 24);
       this.label8.TabIndex = 36;
@@ -220,7 +228,7 @@ namespace Lab01
       // textBox2
       // 
       this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.textBox2.Location = new System.Drawing.Point(396, 268);
+      this.textBox2.Location = new System.Drawing.Point(394, 308);
       this.textBox2.Margin = new System.Windows.Forms.Padding(5);
       this.textBox2.Name = "textBox2";
       this.textBox2.ReadOnly = true;
@@ -230,25 +238,25 @@ namespace Lab01
       // 
       // chart1
       // 
-      chartArea2.Name = "ChartArea1";
-      this.chart1.ChartAreas.Add(chartArea2);
-      legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-      legend2.Name = "Legend1";
-      this.chart1.Legends.Add(legend2);
+      chartArea1.Name = "ChartArea1";
+      this.chart1.ChartAreas.Add(chartArea1);
+      legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+      legend1.Name = "Legend1";
+      this.chart1.Legends.Add(legend1);
       this.chart1.Location = new System.Drawing.Point(661, 10);
       this.chart1.Name = "chart1";
-      series2.ChartArea = "ChartArea1";
-      series2.Legend = "Legend1";
-      series2.Name = "Series1";
-      this.chart1.Series.Add(series2);
-      this.chart1.Size = new System.Drawing.Size(517, 386);
+      series1.ChartArea = "ChartArea1";
+      series1.Legend = "Legend1";
+      series1.Name = "Series1";
+      this.chart1.Series.Add(series1);
+      this.chart1.Size = new System.Drawing.Size(641, 426);
       this.chart1.TabIndex = 38;
       this.chart1.Text = "chart1";
       // 
       // graphicBtn
       // 
       this.graphicBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-      this.graphicBtn.Location = new System.Drawing.Point(340, 316);
+      this.graphicBtn.Location = new System.Drawing.Point(338, 356);
       this.graphicBtn.Name = "graphicBtn";
       this.graphicBtn.Size = new System.Drawing.Size(310, 80);
       this.graphicBtn.TabIndex = 39;
@@ -256,11 +264,100 @@ namespace Lab01
       this.graphicBtn.UseVisualStyleBackColor = true;
       this.graphicBtn.Click += new System.EventHandler(this.graphicBtn_Click);
       // 
+      // iters1
+      // 
+      this.iters1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.iters1.Location = new System.Drawing.Point(548, 455);
+      this.iters1.Margin = new System.Windows.Forms.Padding(5);
+      this.iters1.Name = "iters1";
+      this.iters1.Size = new System.Drawing.Size(100, 29);
+      this.iters1.TabIndex = 40;
+      this.iters1.Text = "100";
+      // 
+      // max
+      // 
+      this.max.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.max.Location = new System.Drawing.Point(548, 494);
+      this.max.Margin = new System.Windows.Forms.Padding(5);
+      this.max.Name = "max";
+      this.max.Size = new System.Drawing.Size(100, 29);
+      this.max.TabIndex = 41;
+      this.max.Text = "1000";
+      // 
+      // iters2
+      // 
+      this.iters2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.iters2.Location = new System.Drawing.Point(548, 533);
+      this.iters2.Margin = new System.Windows.Forms.Padding(5);
+      this.iters2.Name = "iters2";
+      this.iters2.Size = new System.Drawing.Size(100, 29);
+      this.iters2.TabIndex = 42;
+      this.iters2.Text = "100";
+      // 
+      // label9
+      // 
+      this.label9.AutoSize = true;
+      this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.label9.Location = new System.Drawing.Point(320, 458);
+      this.label9.Name = "label9";
+      this.label9.Size = new System.Drawing.Size(220, 24);
+      this.label9.TabIndex = 43;
+      this.label9.Text = "Кол-во шагов загрузки:";
+      // 
+      // label11
+      // 
+      this.label11.AutoSize = true;
+      this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.label11.Location = new System.Drawing.Point(347, 497);
+      this.label11.Name = "label11";
+      this.label11.Size = new System.Drawing.Size(193, 24);
+      this.label11.TabIndex = 44;
+      this.label11.Text = "Кол-во сген. заявок:";
+      // 
+      // label12
+      // 
+      this.label12.AutoSize = true;
+      this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.label12.Location = new System.Drawing.Point(240, 536);
+      this.label12.Name = "label12";
+      this.label12.Size = new System.Drawing.Size(300, 24);
+      this.label12.TabIndex = 45;
+      this.label12.Text = "Кол-во итер-ий моделирования:";
+      // 
+      // label13
+      // 
+      this.label13.AutoSize = true;
+      this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.label13.Location = new System.Drawing.Point(10, 230);
+      this.label13.Name = "label13";
+      this.label13.Size = new System.Drawing.Size(271, 24);
+      this.label13.TabIndex = 46;
+      this.label13.Text = "Средние время пребывания:";
+      // 
+      // textBox3
+      // 
+      this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+      this.textBox3.Location = new System.Drawing.Point(280, 228);
+      this.textBox3.Margin = new System.Windows.Forms.Padding(5);
+      this.textBox3.Name = "textBox3";
+      this.textBox3.ReadOnly = true;
+      this.textBox3.Size = new System.Drawing.Size(152, 29);
+      this.textBox3.TabIndex = 47;
+      this.textBox3.Text = "0";
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(1190, 408);
+      this.ClientSize = new System.Drawing.Size(1314, 443);
+      this.Controls.Add(this.textBox3);
+      this.Controls.Add(this.label13);
+      this.Controls.Add(this.label12);
+      this.Controls.Add(this.label11);
+      this.Controls.Add(this.label9);
+      this.Controls.Add(this.iters2);
+      this.Controls.Add(this.max);
+      this.Controls.Add(this.iters1);
       this.Controls.Add(this.graphicBtn);
       this.Controls.Add(this.chart1);
       this.Controls.Add(this.textBox2);
@@ -309,6 +406,14 @@ namespace Lab01
     private System.Windows.Forms.TextBox textBox2;
     private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     private System.Windows.Forms.Button graphicBtn;
+    private System.Windows.Forms.TextBox iters1;
+    private System.Windows.Forms.TextBox max;
+    private System.Windows.Forms.TextBox iters2;
+    private System.Windows.Forms.Label label9;
+    private System.Windows.Forms.Label label11;
+    private System.Windows.Forms.Label label12;
+    private System.Windows.Forms.Label label13;
+    private System.Windows.Forms.TextBox textBox3;
   }
 }
 
