@@ -11,6 +11,7 @@ namespace Lab01
     public void reset()
     {
       this.max_size = 0;
+      this.Clear();
     }
     public bool push(Request r)
     {

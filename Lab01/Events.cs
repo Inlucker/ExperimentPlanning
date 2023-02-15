@@ -35,7 +35,8 @@ namespace Lab01
     public override void Handle(EventModel model)
     {
       model.generated_n++;
-      if (model.generated_n < model.max_req_n)
+      model.curT = this.time;
+      if (model.curT < model.max_time)
       {
         Request next_req = model.generator.genRequest();
         model.addEvent(new EReqGenerate(next_req));
@@ -55,12 +56,15 @@ namespace Lab01
     public override void Handle(EventModel model)
     {
       model.curT = this.time;
-      if (model.queue.Count != 0)
+      if (model.curT < model.max_time)
       {
-        Request req = model.queue.pop();
-        model.avg_que_time += this.time - req.create_time;
-        model.service.serve(req, this.time);
-        model.addEvent(new EReqServe(model.service.free_time));
+        if (model.queue.Count != 0)
+        {
+          Request req = model.queue.pop();
+          model.avg_que_time += this.time - req.create_time;
+          model.service.serve(req, this.time);
+          model.addEvent(new EReqServe(model.service.free_time));
+        }
       }
     }
   }
