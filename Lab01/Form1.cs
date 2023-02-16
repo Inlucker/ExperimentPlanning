@@ -76,7 +76,7 @@ namespace Lab01
         iters2 = res;
 
       chart1.Series.Clear();
-      chart1.Series.Add("Зависимость ср. времени пребывания от загрузки");
+      chart1.Series.Add("Зависимость ср. времени ожидания от загрузки");
       chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 
       for (int i = 1; i <= iters1; i++)
@@ -94,8 +94,8 @@ namespace Lab01
         {
           model.modelate();
           x += model.theory_drain;
-          y += model.avg_full_time;
-          //y += model.avg_que_time;
+          //y += model.avg_full_time;
+          y += model.avg_que_time;
         }
         x /= iters2;
         y /= iters2;
