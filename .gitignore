@@ -353,3 +353,5 @@ Makefile*
 .qmake.stash
 .qtc_clangd
 ui_*
+.idea
+*.xlsx
