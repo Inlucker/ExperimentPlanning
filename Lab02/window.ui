@@ -422,9 +422,9 @@
   <widget class="QGroupBox" name="groupBox_4">
    <property name="geometry">
     <rect>
-     <x>940</x>
+     <x>1079</x>
      <y>10</y>
-     <width>300</width>
+     <width>161</width>
      <height>200</height>
     </rect>
    </property>
@@ -446,7 +446,7 @@
      <rect>
       <x>20</x>
       <y>50</y>
-      <width>201</width>
+      <width>121</width>
       <height>136</height>
      </rect>
     </property>
@@ -457,6 +457,7 @@
         <font>
          <family>Segoe UI</family>
          <pointsize>12</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -470,6 +471,7 @@
         <font>
          <family>Segoe UI</family>
          <pointsize>12</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -483,6 +485,7 @@
         <font>
          <family>Segoe UI</family>
          <pointsize>12</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -496,6 +499,7 @@
         <font>
          <family>Segoe UI</family>
          <pointsize>12</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -509,6 +513,7 @@
         <font>
          <family>Segoe UI</family>
          <pointsize>12</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -522,6 +527,7 @@
         <font>
          <family>Segoe UI</family>
          <pointsize>12</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -622,9 +628,9 @@
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>550</x>
      <y>20</y>
-     <width>411</width>
+     <width>481</width>
      <height>200</height>
     </rect>
    </property>
@@ -644,10 +650,10 @@
    <widget class="QWidget" name="gridLayoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>10</x>
       <y>70</y>
-      <width>351</width>
-      <height>101</height>
+      <width>441</width>
+      <height>110</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_4">
@@ -657,10 +663,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string notr="true">Дисперсия</string>
+        <string notr="true">Дисперсия x3</string>
        </property>
       </widget>
      </item>
@@ -670,10 +677,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>0.1</string>
+        <string>0.2</string>
        </property>
       </widget>
      </item>
@@ -683,10 +691,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>0.4</string>
+        <string>0.6</string>
        </property>
       </widget>
      </item>
@@ -696,10 +705,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string notr="true">Интенсивность  </string>
+        <string notr="true">Интенсивность  x2</string>
        </property>
       </widget>
      </item>
@@ -709,10 +719,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>3</string>
+        <string>4</string>
        </property>
       </widget>
      </item>
@@ -720,7 +731,9 @@
       <widget class="QLabel" name="label_6">
        <property name="font">
         <font>
+         <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -732,7 +745,9 @@
       <widget class="QLabel" name="label_7">
        <property name="font">
         <font>
+         <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -746,10 +761,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>4</string>
+        <string>5</string>
        </property>
       </widget>
      </item>
@@ -761,7 +777,7 @@
     <rect>
      <x>40</x>
      <y>20</y>
-     <width>400</width>
+     <width>481</width>
      <height>200</height>
     </rect>
    </property>
@@ -781,9 +797,9 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>10</x>
       <y>70</y>
-      <width>341</width>
+      <width>451</width>
       <height>71</height>
      </rect>
     </property>
@@ -794,6 +810,7 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -805,7 +822,9 @@
       <widget class="QLabel" name="label_8">
        <property name="font">
         <font>
+         <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -819,10 +838,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string notr="true">Интенсивность  </string>
+        <string notr="true">Интенсивность  x1</string>
        </property>
       </widget>
      </item>
@@ -830,7 +850,9 @@
       <widget class="QLabel" name="label_5">
        <property name="font">
         <font>
+         <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -844,10 +866,11 @@
         <font>
          <family>Monaco</family>
          <pointsize>14</pointsize>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>2.5</string>
+        <string>3</string>
        </property>
       </widget>
      </item>

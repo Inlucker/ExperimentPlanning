@@ -85,9 +85,9 @@ class Experiment():
         for i in range(len(xmat)):
             b_cur = 0
             for j in range(len(xmat[i])):
-                b_cur += xmat[i][j] * y[j]
-            b.append(b_cur)
-            # b.append(b_cur/MATR_SIZE)
+                #b_cur += xmat[i][j] * y[j]
+                b_cur += plan[j][i] * y[j]
+            b.append(b_cur / MATR_SIZE)
 
         ylin = list()
         ynlin = list()
@@ -108,9 +108,14 @@ class Experiment():
         return realmin + (realmax - realmin) * (x - xmin) / (xmax - xmin)
 
     def param_convert(self, intensity1, intensity2, scatter2):
-        sig = -1;
-        a = -1;
-        b = -1;
+        sig = -1
+        a = -1
+        b = -1
+        #sig = 10000
+        #dif = scatter2 * math.sqrt(12)
+        #mid = intensity1/intensity2 * math.sqrt(math.pi/2)*sig
+        #a = mid - dif / 2
+        #b = mid + dif / 2
         k_step = 1;
         k = k_step;
         while (a < 0 or b < 0 or sig < 0):
@@ -133,8 +138,8 @@ class Experiment():
         for exp in matrix:
             gen_int = self.scale_factor(exp[1], self.min_gen_int, self.max_gen_int)
             #gen_var = self.scale_factor(exp[2], self.min_gen_var, self.max_gen_var)
-            pm_int = self.scale_factor(exp[3], self.min_pm_int, self.max_pm_int)
-            pm_var = self.scale_factor(exp[4], self.min_pm_var, self.max_pm_var)
+            pm_int = self.scale_factor(exp[2], self.min_pm_int, self.max_pm_int)
+            pm_var = self.scale_factor(exp[3], self.min_pm_var, self.max_pm_var)
 
             sigma, a, b = self.param_convert(gen_int, pm_int, pm_var)
 
@@ -144,10 +149,12 @@ class Experiment():
                 ro, avg_wait_time = model.event_based_modelling(self.time)
                 exp_res += avg_wait_time
             exp_res /= MOD_NUMBER
-           
+
+            print("gen_int = ", gen_int, "pm_int = ", pm_int, "pm_dis = ", pm_var, "exp_res =", exp_res)
             y.append(exp_res)
 
         plan, self.b = self.expand_plan(matrix, y, xmat)
+        print()
         return plan, self.b
 
     def check(self, gen_int, pm_int, pm_var):

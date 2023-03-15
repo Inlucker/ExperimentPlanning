@@ -11,13 +11,22 @@ class Modeller:
         # self._processor = Processor(Normal(weibull_a, weibull_lamb))
         self._processor = Processor(Uniform(uniform_a, uniform_b))
         self._generator.add_receiver(self._processor)
+        self._avg_gen_t = 0
+        self._avg_gen_req_n = 0
+        self._avg_proc_t = 0
+        self._avg_proc_req_n = 0
 
     def event_based_modelling(self, end_time):
         generator = self._generator
         processor = self._processor 
 
         gen_period = generator.next_time()
-        proc_period = gen_period + processor.next_time()
+        self._avg_gen_t += gen_period
+        self._avg_gen_req_n += 1
+        proc_period = processor.next_time()
+        self._avg_proc_t += proc_period
+        self._avg_proc_req_n += 1
+        proc_period += gen_period
 
         start_times = [gen_period]
         end_times = [proc_period]
@@ -39,22 +48,34 @@ class Modeller:
                 
 
         while cur_time < end_time:
+        #while self._avg_gen_req_n < end_time:
             if gen_period <= proc_period:
                 generator.emit_request()
-                gen_period += generator.next_time()
+                tmp = generator.next_time()
+                self._avg_gen_t += tmp
+                self._avg_gen_req_n += 1
+                gen_period += tmp
                 cur_time = gen_period
                 start_times.append(cur_time)
             if gen_period >= proc_period:
                 processor.process()
                 if processor.current_queue_size > 0:
-                    proc_period += processor.next_time()
+                    tmp = processor.next_time()
+                    self._avg_proc_t += tmp
+                    self._avg_proc_req_n += 1
+                    proc_period += tmp
                 else:
-                    proc_period = gen_period + processor.next_time()
+                    tmp = processor.next_time()
+                    self._avg_proc_t += tmp
+                    self._avg_proc_req_n += 1
+                    proc_period = gen_period + tmp
                 cur_time = proc_period
                 end_times.append(cur_time)
         
         avg_wait_time = 0
         # print(len(start_times), len(end_times))
+        print ("avg_gen_time = ", self._avg_gen_t/self._avg_gen_req_n, \
+               "avg_proc_time = ", self._avg_proc_t/self._avg_proc_req_n)
         request_count = min(len(end_times), len(start_times))
 
         tmp = []
