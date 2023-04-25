@@ -86,7 +86,7 @@ def pfe_inputs(root):
     i_list_1 = i.InputList(master=frame_inputs, items=items_1, title="Интенсивность поступления заявок 1 (x1)")
     i_list_2 = i.InputList(master=frame_inputs, items=items_2, title="Интенсивность поступления заявок 2 (x3)")
     i_list_3 = i.InputList(master=frame_inputs, items=items_3, title="Интенсивность обработки заявок 1 (x2)")
-    i_list_4 = i.InputList(master=frame_inputs, items=items_4, title="Интенсивнос   ть обработки заявок 2 (x4)")
+    i_list_4 = i.InputList(master=frame_inputs, items=items_4, title="Интенсивность обработки заявок 2 (x4)")
 
     i_list_1.pack(side=LEFT, padx=10)
     i_list_2.pack(side=LEFT,  padx=10)
